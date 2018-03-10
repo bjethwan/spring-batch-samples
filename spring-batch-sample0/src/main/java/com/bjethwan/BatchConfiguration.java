@@ -17,11 +17,8 @@ import org.springframework.context.annotation.Configuration;
 @EnableBatchProcessing
 public class BatchConfiguration {
 
-	@Autowired
-	private JobBuilderFactory jobBuilderFactory;
-	
-	@Autowired
-	private StepBuilderFactory stepBuilderFactory;
+	@Autowired private JobBuilderFactory jobBuilderFactory;
+	@Autowired private StepBuilderFactory stepBuilderFactory;
 	
 	@Bean
 	public Step step1(){
@@ -42,3 +39,4 @@ public class BatchConfiguration {
 				.build();
 	}
 }
+
